@@ -17,7 +17,7 @@ var playGame = function () {
   }
 
   // I want to make sure I convert to Uppercase to match what is in my array
-  userChoice = userChoice.toUpperCase;
+  userChoice = userChoice.toUpperCase();
 
   // I want to get a random selection from my options array
   var index = Math.floor(Math.random() * options.length);
@@ -30,19 +30,19 @@ var playGame = function () {
     ties++;
     window.alert("Its a tie!!");
   } else if (
-    (userChoice === "R" && computerChoice === "S") ||
-    (userChoice === "P" && computerChoice === "R") ||
+    (userChoice === "R" && computerChoice === "S") || 
+    (userChoice === "P" && computerChoice === "R") || 
     (userChoice === "S" && computerChoice === "P")
   ) {
-    win++;
-    window.alert("You win!!")
+    wins++;
+    window.alert("You win!!");
   } else {
     losses++;
     window.alert("You lost!");
   }
 
   window.alert("Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties
-  )
+  );
 
 //   Ask the player to play again
 var playAgain = window.confirm("Play again?")
